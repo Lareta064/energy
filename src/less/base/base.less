@@ -15,7 +15,7 @@ body {
 	color: @basic;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
-	line-height: normal;
+	line-height: 1.4;
 
 
 }
@@ -23,6 +23,7 @@ body {
 a,
 a:hover {
 	text-decoration: none;
+	transition: .5s;
 }
 
 
@@ -35,6 +36,7 @@ ul {
 h1,
 h2,
 h3,
+h4,
 p {
 	padding: 0;
 	margin: 0;
@@ -48,25 +50,41 @@ input {
 	outline: none;
 }
 
+.title-4 {
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: @blueText;
+}
 
+.text-medium {
+	font-weight: 500;
+}
+
+.weight-light {
+	font-weight: 300;
+}
+
+.wrapper {
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .container {
 	width: 100%;
-	max-width: 1760px;
-	padding-left: 15px;
-	padding-right: 15px;
+	max-width: 1400px;
+
 	margin: 0 auto;
 
-	@media(min-width: 992px) {
-		padding: 0px 25px;
+	@media(max-width: 1919px) {
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 
-	@media(min-width: 1440px) {
-		padding: 0px 35px;
-	}
-
-	@media(min-width: 1920px) {
-		padding: 0px;
+	@media(max-width: 767px) {
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 
 }
