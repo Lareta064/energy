@@ -1,12 +1,149 @@
 .footer {
     padding-top: 55px;
-    padding-left: 20px;
+    padding-left: 360px;
     background-color: @footerBg;
     color: #fff;
+    line-height: 1.5;
+
+    .footer-link {
+        color: #fff;
+    }
+
+    @media(max-width:991px) {
+        padding-left: 0;
+    }
+}
+
+.footer-top {
+    padding-bottom: 50px;
+    border-bottom: 2px solid #acacac;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    padding-left: 40px;
+    flex-direction: row-reverse;
+
+    @media(max-width:1600px) {
+        flex-direction: column;
+    }
+}
+
+.footer-contacts {
+    display: block;
+
+    @media(max-width:1600px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.footer-contacts__item {
+    margin-bottom: 10px;
+    font-weight: 300;
+
+    @media(max-width:1600px) {
+        width: 48%;
+
+        &:nth-child(1) {
+            order: 1
+        }
+
+        &:nth-child(2) {
+            order: 3
+        }
+
+        &:nth-child(3) {
+            order: 4
+        }
+
+        &:nth-child(4) {
+            order: 2
+        }
+    }
+
+    @media(max-width:1439px) {
+        width: 100%;
+
+        &:nth-child(1) {
+            order: 1
+        }
+
+        &:nth-child(2) {
+            order: 2
+        }
+
+        &:nth-child(3) {
+            order: 3
+        }
+
+        &:nth-child(4) {
+            order: 4
+        }
+    }
+}
+
+.footer-contacts__company {
+    margin-bottom: 30px;
+}
+
+.footer-contacts__item span {
+    display: inline-block;
+    padding-right: 8px;
+
+    @media(max-width:424px) {
+        display: block;
+        padding-bottom: 6px;
+    }
+}
+
+.footer-link {
+    display: block;
+}
+
+.footer-link:hover {
+    color: @linkColor;
+}
+
+.footer-menu {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+
+    .footer-link {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .title-4 {
+        margin-bottom: 12px;
+    }
+
+    @media(max-width:1600px) {
+        margin-bottom: 40px;
+    }
+
+    @media(max-width:767px) {
+        // display: block;
+        display: none;
+    }
+}
+
+.footer-copyright {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+
+    @media(max-width:767px) {
+        display: block;
+    }
+}
+
+.footer-copyright a {
+    color: @blueText;
+    border-bottom: 1px solid @blueText
 }
