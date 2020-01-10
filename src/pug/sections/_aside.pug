@@ -1,6 +1,4 @@
 aside.aside
-    .aside-header
-        img.aside-header-img(src="../../img/logo.png", alt="logo")
     nav.aside-nav
         ul.aside-nav-wrpper
             li.aside-nav-item
@@ -16,9 +14,14 @@ aside.aside
             li.aside-nav-item
                 a.aside-nav-link(href="#") Контакты
     .aside-footer
-        .aside-footer-wrapper
+        .aside-wrapper
             .aside-footer-phone 8 (8452) 674 604
-            .aside-footer-callback
-                a(href="#") Заказать звонок
-            .aside-footer-price
-                a(href="#") Запрос цены
+            a.aside-footer-callback(href="#") Заказать звонок
+            a.aside-footer-price(href="#") Запрос цены
+    .header-social.header-social--aside
+        a(href="#").header-social-item
+            i.fab.fa-twitter(aria-hidden='true')
+        a(href="#").header-social-item
+            i.fab.fa-facebook-f(aria-hidden='true')
+        a(href="#").header-social-item
+            i.fab.fa-vk(aria-hidden='true')
