@@ -50,6 +50,16 @@ input {
 	outline: none;
 }
 
+.title-3 {
+	font-size: 30px;
+	font-weight: 700;
+	color: @blueText;
+
+	@media(max-width:1365px) {
+		font-size: 25px;
+	}
+}
+
 .title-4 {
 	font-size: 16px;
 	font-weight: 700;
@@ -65,10 +75,13 @@ input {
 	font-weight: 300;
 }
 
+
+
 .wrapper {
 	max-width: 1920px;
 	margin-left: auto;
 	margin-right: auto;
+	overflow: hidden;
 }
 
 .container {
@@ -86,8 +99,8 @@ input {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-
 }
+
 
 .aside.show {
 	transform: translateX(0);
