@@ -34,30 +34,36 @@
     min-width: 340px;
     border-right: 1px solid @blue;
 
+    @media (max-width: 1365px) {
+        min-width: 300px;
+    }
+
+    @media (max-width: 991px) {
+        min-width: 340px;
+    }
+
     @media (max-width: 575px) {
         padding-left: 20px;
         width: 100%;
         margin-bottom: 20px;
         border: none;
-    }
-
-    @media (max-width: 575px) {
         min-width: 180px;
         max-width: 180px;
-
         img {
             height: auto
         }
     }
+   
 }
-
+.header-icons {
+    align-items: center;
+}
 .header-icons:before,
 .header-logo:before,
 .header-logo:after {
     content: '';
     position: absolute;
     bottom: -2px;
-
     height: 5px;
     width: 20px;
     background-color: #fff;
@@ -68,7 +74,9 @@
 }
 
 .header-icons:before {
-    left: 340px;
+    @media (max-width: 991px) {
+        left: 340px;
+    }
 }
 
 .header-logo:before {
@@ -92,9 +100,6 @@
     @media (max-width: 991px) {
         padding: 25px;
         margin-left: auto;
-    }
-
-    @media (max-width: 767px) {
         display: none;
     }
 }
@@ -108,16 +113,19 @@
     padding: 6px;
 }
 
-.fa-twitter {
+.fa-twitter,
+.fa-vk,
+.fa-facebook-f {
     color: @blue;
 }
 
-.fa-vk {
-    color: @blue;
+.fa-twitter:hover,
+.fa-vk:hover,
+.fa-facebook-f {
+    color: @orange;
 }
 
 .fa-facebook-f {
-    color: @orange;
     margin-left: 17px;
     margin-right: 17px;
 }
@@ -128,16 +136,13 @@
     border-left: 1px solid @blue;
     border-right: 1px solid @blue;
     margin-left: auto;
+    height: 78px;
 
     @media (max-width: 991px) {
         order: 2;
         margin-left: 0;
-    }
-
-    @media (max-width: 767px) {
-        order: 2;
         margin-left: auto;
-        border: none;
+        border-right: none;
     }
 
     @media (max-width: 575px) {
@@ -164,5 +169,21 @@
     @media (max-width: 767px) {
         position: absolute;
         z-index: 40;
+    }
+}
+.header a.header-phone {
+    margin-bottom: 0;
+    margin-left: 20px;
+    display: none;
+    @media (max-width: 991px) {
+        display: block;
+    }
+}
+.header .fa-phone-alt {
+    font-size: 25px;
+    margin-left: 20px;
+    display: none;
+    @media (max-width: 991px) {
+        display: block;
     }
 }
