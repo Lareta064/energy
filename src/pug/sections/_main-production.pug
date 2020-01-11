@@ -1,25 +1,53 @@
-section.production
+section.main-section
     .container
-        .section-menu
-            h3.title-3 Продукция
-            ul.section-menu-list
-                li.menu-item-dropdown
-                    a(href="#").section-menu-item Блочно-модульные
-                    .dropdown-list
-                        a(href="#").dropdown-list-item ТКУ
-                        a(href="#").dropdown-list-item ГРУ
-                        a(href="#").dropdown-list-item Шкафы
-                li
+        .section-content
+            .section-menu
+                h3.title-3 Продукция
+
+                //section-menu-mobile
+                ul.section-menu-mobile
+                    //section-menu-item
+                    li.menu-mobile-item
+                        a(href="#!").mobile-item-category ТКУ                        
+                        .menu-mobile-drop
+                            a(href="#").section-menu-item Блочно-модульные
+                            a(href="#").section-menu-item Блочно-модульные
+                            a(href="#").section-menu-item Блочно-модульные
+                            
+                    //section-menu-item
+                    li.menu-mobile-item
+                        a(href="#!").mobile-item-category ГРУ, Шкафы
+                        .menu-mobile-drop
+                            a(href="#").section-menu-item Блочно-модульные
+                            a(href="#").section-menu-item Блочно-модульные
+                            a(href="#").section-menu-item Блочно-модульные
+                            a(href="#").section-menu-item Блочно-модульные
+                            
+
+                    //section-menu-item
+                    li.menu-mobile-item                        
+                        a(href="#!").mobile-item-category ПГБ
+                        .menu-mobile-drop                            
+                            a(href="#").section-menu-item Блочно-модульные
+                            a(href="#").section-menu-item Блочно-модульные
+                            a(href="#").section-menu-item Блочно-модульные
+                            a(href="#").section-menu-item Блочно-модульные
+                
+                
+                //section-menu-desktop            
+                nav.section-menu-list                    
+                    a(href="#").section-menu-item Блочно-модульные 
                     a(href="#").section-menu-item Модульные крышные
-                li
                     a(href="#").section-menu-item Модульные на шасси
-                li
                     a(href="#").section-menu-item Паровые котельные
-                li
                     a(href="#").section-menu-item Термомасляные
-                li
                     a(href="#").section-menu-item Стационарные котельные
-                li
                     a(href="#").section-menu-item Трубы дымовые
-                li
-                    a(href="#").section-menu-item ПГБ
+                    a(href="#").section-menu-item Котлы наружного размещения
+                    a(href="#").section-menu-item Измерительные комплексы и газовые счетчики
+            .section-img
+                img(src="img/home/img1.jpg", alt="img")
+                .categiry-list
+                    a(href="#").categiry-list-item ТКУ
+                    a(href="#").categiry-list-item ГРУ, Шкафы
+                    a(href="#").categiry-list-item ПГБ
