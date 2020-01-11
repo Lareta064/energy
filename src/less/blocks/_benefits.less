@@ -24,6 +24,7 @@
     z-index: 5;
 
 
+
     color: rgb(0, 141, 210);
 
     .benefits-text {
@@ -55,46 +56,68 @@
 }
 
 .benefits-carousel {
+    position: relative;
     margin-bottom: 40px;
 
-    .owl-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        right: 0;
-        display: flex;
-        justify-content: space-between;
-        z-index: -1;
 
-        // @media(max-width:767px) {
-        //     top: auto;
-        //     bottom: -20px;
-        //     justify-content: center;
+    .slick-slide img {
+        margin-right: 30px;
 
-        // }
+    }
 
-        button.owl-next,
-        button.owl-prev {
-            font-size: 50px;
-            color: @orange;
-            position: relative;
-            left: -30px;
-            outline: none;
-            cursor: pointer;
-            transition: .5s;
+    @media(max-width:424px) {
+        position: relative;
+        left: -20px;
+        width: 110%;
 
-            &:hover {
-                color: @blueText;
-            }
+        .slick-slide img {
 
-        }
-
-        button.owl-next {
-            left: auto;
-            right: -30px;
+            height: 180px;
         }
     }
+
+    // .owl-carousel-item {
+    //     margin-right: 30px;
+    // }
+
+    // .owl-nav {
+    //     position: absolute;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     left: 0;
+    //     right: 0;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     z-index: -1;
+
+    // @media(max-width:767px) {
+    //     top: auto;
+    //     bottom: -20px;
+    //     justify-content: center;
+
+    // }
+
+    //     button.owl-next,
+    //     button.owl-prev {
+    //         font-size: 50px;
+    //         color: @orange;
+    //         position: relative;
+    //         left: -30px;
+    //         outline: none;
+    //         cursor: pointer;
+    //         transition: .5s;
+
+    //         &:hover {
+    //             color: @blueText;
+    //         }
+
+    //     }
+
+    //     button.owl-next {
+    //         left: auto;
+    //         right: -30px;
+    //     }
+    // }
 
 }
 

@@ -1,20 +1,28 @@
 $(document).ready(function () {
-    $('.benefits-carousel').owlCarousel({
-        loop: true,
-        nav: true,
-        margin: 40,
-        smartSpeed: 1000,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1366: {
-                items: 3
-            }
-        }
+    $('.benefits-carousel').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        centerPadding: '60px',
+        // responsive: [{
+        //         breakpoint: 600,
+        //         settings: {
+        //             slidesToShow: 3,
+        //             slidesToScroll: 1
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 480,
+        //         settings: {
+        //             slidesToShow: 3,
+        //             slidesToScroll: 1
+        //         }
+        //     }
+        // ]
+
+
+
     });
     // let gumburger = document.querySelector('.fa-bars');
     // let aside = document.querySelector('.aside');
