@@ -4,6 +4,43 @@ section.main-section
             .section-menu.section-menu--flex
                 .section-menu-top
                     h3.title-3 Услуги
+
+                    //section-menu-mobile
+                    ul.section-menu-mobile
+                        //section-menu-item
+                        li.menu-mobile-item
+                            a(href="#!").mobile-item-category ТКУ                        
+                            .menu-mobile-drop
+                                button.close-drop
+                                    i.fas.fa-times
+                                a(href="#").section-menu-item Блочно-модульные
+                                a(href="#").section-menu-item Блочно-модульные
+                                a(href="#").section-menu-item Блочно-модульные
+                                
+                        //section-menu-item
+                        li.menu-mobile-item
+                            a(href="#!").mobile-item-category ГРУ, Шкафы
+                            .menu-mobile-drop                           
+                                button.close-drop
+                                    i.fas.fa-times
+                                a(href="#").section-menu-item Блочно-модульные
+                                a(href="#").section-menu-item Блочно-модульные
+                                a(href="#").section-menu-item Блочно-модульные
+                                a(href="#").section-menu-item Блочно-модульные
+                                
+
+                        //section-menu-item
+                        li.menu-mobile-item                        
+                            a(href="#!").mobile-item-category ПГБ
+                            .menu-mobile-drop                           
+                                button.close-drop
+                                    i.fas.fa-times                            
+                                a(href="#").section-menu-item Блочно-модульные
+                                a(href="#").section-menu-item Блочно-модульные
+                                a(href="#").section-menu-item Блочно-модульные
+                                a(href="#").section-menu-item Блочно-модульные
+                    
+                    // desktop menu
                     nav.section-menu-list
                         a(href="#").section-menu-item Проектирование
                         a(href="#").section-menu-item Изготовление
@@ -11,14 +48,19 @@ section.main-section
                         a(href="#").section-menu-item Монтаж
                         a(href="#").section-menu-item Запуск и наладка
                     
-                .questionnaire
+                .questionnaire.questionnaire--desktop
                     p.questionnaire-title Опросный лист
                     a(href="#").questionnaire-link.animate-border Скачать
                     a(href="#").questionnaire-img
                         img(src="img/pdf-icon.png", alt="icon")
 
-            .section-img
-                .section-img-top      
-                    img(src="img/home/img2.jpg", alt="img")
-                .section-img-bottom     
-                    img(src="img/home/img3.jpg", alt="img")
+            .section-img.section-img--double                   
+                img.section-img-top(src="img/home/img2.jpg", alt="img")                     
+                img.section-img-bottom(src="img/home/img3.jpg", alt="img")
+
+        
+        .questionnaire.questionnaire--mobile
+            p.questionnaire-title Опросный лист
+            a(href="#").questionnaire-link.animate-border Скачать
+            a(href="#").questionnaire-img
+                img(src="img/pdf-icon.png", alt="icon")
