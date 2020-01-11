@@ -8,11 +8,17 @@ $(document).ready(function () {
     // });
     const mobCategory = document.querySelectorAll('.mobile-item-category');
     const mobCategoryDrop = document.querySelectorAll('.menu-mobile-drop');
+    const btnDropClose = document.querySelectorAll('.close-drop');
 
+    for (let i = 0; i < btnDropClose.length; i++) {
+        btnDropClose[i].addEventListener('click', function () {
+            this.parentElement.classList.remove('active');
+        })
+    }
     for (let i = 0; i < mobCategory.length; i++) {
 
         mobCategory[i].addEventListener('click', function () {
-
+            console.log('555');
             for (let j = 0; j < mobCategoryDrop.length; j++) {
                 mobCategoryDrop[j].classList.remove('active');
             }

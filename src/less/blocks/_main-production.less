@@ -14,14 +14,24 @@ section {
     }
 
     @media(max-width:767px) {
+        padding-top: 0px;
+    }
+
+}
+
+.main-section-pt {
+    @media(max-width:767px) {
         padding-top: 160px;
     }
 }
 
 .section-menu {
     .title-3 {
-        margin-bottom: 30px;
         margin-bottom: 1em;
+
+        @media(max-width:767px) {
+            margin-bottom: 15px;
+        }
     }
 }
 
@@ -35,7 +45,10 @@ section {
     display: flex;
     padding-bottom: 60px;
 
-    @media(max-width:767px) {
+    // @media(max-width:767px) {
+    //     flex-direction: column;
+    // }
+    @media(max-width:575px) {
         flex-direction: column;
     }
 }
@@ -62,6 +75,7 @@ section {
 
     @media(max-width:767px) {
         display: block;
+        margin-bottom: 25px;
     }
 }
 
@@ -69,34 +83,53 @@ section {
     position: relative;
 
     a {
-        padding-bottom: 12px;
-        padding-top: 12px;
+        padding-bottom: 10px;
+        padding-top: 10px;
         color: @basic;
         font-weight: 700;
         font-size: 20px;
+        display: block;
     }
 }
 
 .menu-mobile-drop {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
-    transform: translate(100%, 100%);
+    left: -20px;
+    right: -20px;
+    transform: translate(-110%, 100%);
     z-index: 10;
     background-color: #fff;
     padding: 25px 20px;
     transition: .5s;
 
+
 }
 
 .menu-mobile-drop.active {
-    transform: translate(0%, 100%)
+    transform: translate(0%, 100%);
+    box-shadow: 0 0 24px rgba(0, 0, 0, .15);
 }
 
 .menu-mobile-link {
     display: block;
     padding: 8px;
+}
+
+.close-drop {
+    background-color: transparent;
+    border: 0px;
+    color: @blueText;
+    outline: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px;
+    transition: .5s;
+
+    &:hover {
+        color: @orange;
+    }
 }
 
 .section-img {
@@ -122,11 +155,27 @@ section {
     }
 
     @media(max-width:991px) {
-        height: 360px;
+        min-height: 360px;
     }
 
     @media(max-width:767px) {
+        min-height: 240px;
+        max-height: 260px;
         width: 100%;
+
+    }
+
+    @media(max-width:575px) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 400px;
+        max-height: 340px;
+    }
+
+    @media(max-width:375px) {
+
+        min-height: 240px;
+        max-height: 260px;
     }
 
     .categiry-list {
@@ -263,6 +312,22 @@ section {
     align-items: center;
 }
 
+.questionnaire--desktop {
+    display: flex;
+
+    @media(max-width:767px) {
+        display: none;
+    }
+}
+
+.questionnaire--mobile {
+    display: none;
+
+    @media(max-width:767px) {
+        display: flex;
+    }
+}
+
 .questionnaire-title {
     font-size: 20px;
     font-weight: 700;
@@ -328,6 +393,14 @@ section {
 
     @media(max-width:1365px) {
         transform: translate(130%, -110%);
+    }
+
+    @media(max-width:767px) {
+        transform: translate(0%, 50%);
+    }
+
+    @media(max-width:575px) {
+        display: none;
     }
 
 }
