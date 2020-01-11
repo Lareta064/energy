@@ -1,5 +1,21 @@
 $(document).ready(function () {
-
+    $('.benefits-carousel').owlCarousel({
+        loop: true,
+        nav: true,
+        margin: 40,
+        smartSpeed: 1000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1366: {
+                items: 3
+            }
+        }
+    });
     // let gumburger = document.querySelector('.fa-bars');
     // let aside = document.querySelector('.aside');
 
