@@ -5,23 +5,9 @@ $(document).ready(function () {
         centerMode: true,
         variableWidth: true,
         centerPadding: '60px',
-        // responsive: [{
-        //         breakpoint: 600,
-        //         settings: {
-        //             slidesToShow: 3,
-        //             slidesToScroll: 1
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 480,
-        //         settings: {
-        //             slidesToShow: 3,
-        //             slidesToScroll: 1
-        //         }
-        //     }
-        // ]
-
-
+        autoplay: true,
+        prevArrow: '<span class="slick-arrow--custom-left"><i class="fas fa-angle-left"></span>',
+        nextArrow: '<span class="slick-arrow--custom-right" ><i class="fas fa-angle-right"></span>'
 
     });
     // let gumburger = document.querySelector('.fa-bars');
@@ -30,6 +16,17 @@ $(document).ready(function () {
     // gumburger.addEventListener('click', function () {
     //     aside.classList.toggle('show');
     // });
+
+    //читать далее блок Партнеры
+    const btnMoreInfo = document.querySelector('.more-info');
+    const hideInfo = document.querySelector('.section-paragraph--hide');
+
+    btnMoreInfo.addEventListener('click', function () {
+        hideInfo.style.display = 'block';
+        this.style.display = 'none'
+    })
+
+    //подкатегории в моб меню
     const mobCategory = document.querySelectorAll('.mobile-item-category');
     const mobCategoryDrop = document.querySelectorAll('.menu-mobile-drop');
     const btnDropClose = document.querySelectorAll('.close-drop');
