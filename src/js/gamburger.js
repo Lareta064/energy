@@ -23,17 +23,18 @@
     mobileMenuToggle.addEventListener('click', function () {
         if (this.classList.contains('active')) {
             mobileMenu.classList.add('show')
-            bodyElement.classList.add('noscroll')
+            // bodyElement.classList.add('noscroll')
 
         } else {
             mobileMenu.classList.remove('show')
-            bodyElement.classList.remove('noscroll')
+            // bodyElement.classList.remove('noscroll')
         }
     })
 
-    // mobileMenu.addEventListener('click', function () {
-    //     this.classList.remove('active')
-    //     mobileMenuToggle.classList.remove('active')
-    //     bodyElement.classList.remove('noscroll')
-    // })
+    window.addEventListener('resize', function () {
+
+        mobileMenu.classList.remove('show');
+        mobileMenuToggle.classList.remove('active');
+
+    })
 })();

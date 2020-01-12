@@ -1,27 +1,27 @@
 $(document).ready(function () {
-    // $('.benefits-carousel').owlCarousel({
-    //     loop: true,
-    //     nav: true,
-    //     margin: 40,
-    //     smartSpeed: 1000,
-    //     responsive: {
-    //         0: {
-    //             items: 1
-    //         },
-    //         600: {
-    //             items: 2
-    //         },
-    //         1366: {
-    //             items: 3
-    //         }
-    //     }
-    // });
-    // let gumburger = document.querySelector('.fa-bars');
-    // let aside = document.querySelector('.aside');
+    $('.benefits-carousel').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        centerPadding: '60px',
+        autoplay: true,
+        prevArrow: '<span class="slick-arrow--custom-left"><i class="fas fa-angle-left"></span>',
+        nextArrow: '<span class="slick-arrow--custom-right" ><i class="fas fa-angle-right"></span>'
 
-    // gumburger.addEventListener('click', function () {
-    //     aside.classList.toggle('show');
-    // });
+    });
+
+
+    //читать далее блок Партнеры
+    const btnMoreInfo = document.querySelector('.more-info');
+    const hideInfo = document.querySelector('.section-paragraph--hide');
+
+    btnMoreInfo.addEventListener('click', function () {
+        hideInfo.style.display = 'block';
+        this.style.display = 'none'
+    })
+
+    //подкатегории в моб меню
     const mobCategory = document.querySelectorAll('.mobile-item-category');
     const mobCategoryDrop = document.querySelectorAll('.menu-mobile-drop');
     const btnDropClose = document.querySelectorAll('.close-drop');
@@ -34,7 +34,7 @@ $(document).ready(function () {
     for (let i = 0; i < mobCategory.length; i++) {
 
         mobCategory[i].addEventListener('click', function () {
-            console.log('555');
+
             for (let j = 0; j < mobCategoryDrop.length; j++) {
                 mobCategoryDrop[j].classList.remove('active');
             }
