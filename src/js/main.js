@@ -52,5 +52,33 @@ $(document).ready(function () {
         // console.log(e.deltaY)
     });
 
+    // search
+    let searchForm = document.getElementById('searchform');
+    let searchInput = document.querySelector('.header-form-input');
+    searchForm.addEventListener('click', function () {
+        searchInput.classList.add('search-open');
+        searchForm.classList.add('search-open');
+    });
+    // let searchIcon = $('.search-icon');
+    // let closeIcon = $('.search-close');
+    // let input = $('.header-form-input');
+
+    // $(searchIcon).on('click', function () {
+    // 	$('.header-search').css('pointer-events', 'auto');
+    // 	if ( input.hasClass('search-open') ) {
+    // 		$('#searchform').submit();
+    // 		input.val('');
+    // 	} 
+    // 	input.addClass('search-open');
+    // 	searchIcon.addClass('fa-bg');
+    // 	closeIcon.css('display', 'flex');
+    // });
+
+    // $(closeIcon).on('click', function(){
+    // 	searchIcon.removeClass('fa-bg');
+    // 	closeIcon.css('display', 'none');
+    // 	input.removeClass('search-open');
+    // });
+
 
 })
