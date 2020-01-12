@@ -10,12 +10,6 @@ $(document).ready(function () {
         nextArrow: '<span class="slick-arrow--custom-right" ><i class="fas fa-angle-right"></span>'
 
     });
-    // let gumburger = document.querySelector('.fa-bars');
-    // let aside = document.querySelector('.aside');
-
-    // gumburger.addEventListener('click', function () {
-    //     aside.classList.toggle('show');
-    // });
 
     //читать далее блок Партнеры
     const btnMoreInfo = document.querySelector('.more-info');
