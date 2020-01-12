@@ -68,6 +68,7 @@
     display: flex;
     width: 100%;
     align-items: center;
+
     @media (max-width: 767px) {
         flex-wrap: wrap;
         flex-direction: column;
@@ -117,6 +118,7 @@
     align-items: center;
     font-size: 20px;
     background-color: white;
+
     @media (max-width: 991px) {
         padding: 25px;
         margin-left: auto;
@@ -158,6 +160,7 @@
     margin-left: 20px;
     -webkit-transition: ease-in .5s;
     transition: ease-in .5s;
+
     @media (max-width: 991px) {
         order: 2;
         margin-left: 0;
@@ -184,9 +187,11 @@
     align-self: center;
     padding-left: 40px;
     background-color: white;
+
     @media (max-width: 767px) {
         padding-left: 20px;
     }
+
     @media (max-width: 575px) {
         margin-left: auto;
         padding-left: 10px;
@@ -201,14 +206,17 @@
         z-index: 40;
     }
 }
+
 .header-phone-wrapper {
     display: flex;
     white-space: nowrap;
     padding-right: 0;
+
     @media (max-width: 767px) {
         padding-top: 25px;
     }
 }
+
 .header a.header-phone {
     margin-bottom: 0;
     margin-left: 20px;
@@ -233,6 +241,10 @@
         display: block;
     }
 
+    @media (max-width: 767px) {
+        margin-left: 0px;
+    }
+
     @media (max-width: 575px) {
         margin-bottom: 25px;
     }
@@ -255,14 +267,17 @@
     transition: ease-in .5s;
     background-color: @white;
     cursor: pointer;
+
     @media (max-width: 991px) {
         position: absolute;
     }
+
     @media (max-width: 767px) {
         height: 40px;
         padding-left: 40px;
         padding-right: 30px;
     }
+
     @media (max-width: 575px) {
         height: 40px;
         padding-right: 0;
@@ -270,12 +285,15 @@
         border-right: none;
     }
 }
+
 .form button {
     width: 48%;
 }
+
 .search-close {
     display: none;
 }
+
 .search-submit {
     opacity: 0;
     color: transparent;
@@ -286,6 +304,7 @@
     top: 0;
     margin: 0;
 }
+
 .header-form-input {
     font-size: 20px;
     align-self: center;
@@ -297,23 +316,29 @@
     border: none;
     -webkit-transition: ease-in .5s;
     transition: ease-in .5s;
+
     @media (max-width: 991px) {
         height: 89px;
     }
+
     @media (max-width: 575px) {
         height: 30px;
     }
 }
+
 .search-open {
     width: 100%;
+
     @media (max-width: 991px) {
         z-index: 220;
         height: 80px;
     }
+
     @media (max-width: 767px) {
         margin-top: 12px;
         height: 50px;
     }
+
     @media (max-width: 575px) {
         padding-left: 5px;
         height: auto;
@@ -321,6 +346,7 @@
         margin-top: 0;
     }
 }
+
 .header-search-open {
     @media (max-width: 767px) {
         height: 40px;

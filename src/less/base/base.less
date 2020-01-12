@@ -37,6 +37,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p {
 	padding: 0;
 	margin: 0;
@@ -152,12 +153,7 @@ input {
 	padding-right: 0;
 	margin: 0 auto;
 
-	@media(max-width: 1919px) {
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-
-	@media(max-width: 767px) {
+	@media(max-width: 1799px) {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -167,13 +163,47 @@ input {
 .aside.show {
 	transform: translateX(0);
 }
+
 .breadcrumbs {
 	position: fixed;
-    left: 690px;
-    top: 80px;
-    right: 0;
-    z-index: 250;
-    max-width: 1920px;
-    margin-left: auto;
-    margin-right: auto;
+	left: 400px;
+	top: 80px;
+	right: 0;
+	z-index: 250;
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+
+}
+
+.breadcrumbs-item {
+	display: inline-block;
+	font-size: 12px;
+	position: relative;
+	padding-right: 16px;
+	color: @basic;
+
+	&:last-child {
+		cursor: default;
+	}
+
+	&:last-child:hover {
+		color: @basic;
+	}
+
+	&:hover {
+		color: @blueText;
+	}
+
+	&:last-child:after {
+		display: none;
+	}
+}
+
+.breadcrumbs-item:after {
+	content: '/';
+	position: absolute;
+	bottom: 0;
+	right: 6px;
 }
