@@ -1,26 +1,4 @@
 $(document).ready(function () {
-    $('.benefits-carousel').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        variableWidth: true,
-        centerPadding: '60px',
-        autoplay: true,
-        prevArrow: '<span class="slick-arrow--custom-left"><i class="fas fa-angle-left"></span>',
-        nextArrow: '<span class="slick-arrow--custom-right" ><i class="fas fa-angle-right"></span>'
-
-    });
-
-
-    //читать далее блок Партнеры
-    const btnMoreInfo = document.querySelector('.more-info');
-    const hideInfo = document.querySelector('.section-paragraph--hide');
-
-    btnMoreInfo.addEventListener('click', function () {
-        hideInfo.style.display = 'block';
-        this.style.display = 'none'
-    })
-
     //подкатегории в моб меню
     const mobCategory = document.querySelectorAll('.mobile-item-category');
     const mobCategoryDrop = document.querySelectorAll('.menu-mobile-drop');
@@ -64,7 +42,7 @@ $(document).ready(function () {
         }
     });
 
-    console.log('555');
+
     //-tabs Products
     const tabsToggleTable = document.querySelector('#tabOne');
     const tabsToggleDescrip = document.querySelector('#tabTwo');
@@ -72,7 +50,7 @@ $(document).ready(function () {
     const tabsDescripContent = document.querySelector('#tabTwoContent');
 
     tabsToggleTable.addEventListener('click', function () {
-        console.log('456');
+
         this.classList.add('active');
         tabsToggleDescrip.classList.remove('active');
         tabsTableContent.classList.add('active');
@@ -80,13 +58,12 @@ $(document).ready(function () {
 
     });
     tabsToggleDescrip.addEventListener('click', function () {
-        console.log('789');
+
         this.classList.add('active');
         tabsToggleTable.classList.remove('active');
         tabsDescripContent.classList.add('active');
         tabsTableContent.classList.remove('active');
 
     });
-
 
 })

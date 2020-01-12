@@ -16,18 +16,22 @@
         });
     }
     //-показать мобильное меню
-    const bodyElement = document.querySelector('body')
+    const sectionElement = document.querySelectorAll('section')
     const mobileMenuToggle = document.querySelector('#nav-menu-toggle')
     const mobileMenu = document.querySelector('.aside')
 
     mobileMenuToggle.addEventListener('click', function () {
         if (this.classList.contains('active')) {
             mobileMenu.classList.add('show')
-            // bodyElement.classList.add('noscroll')
+            for (let i = 0; i < sectionElement.length; i++) {
+                sectionElement[i].classList.add('blur')
+            }
 
         } else {
             mobileMenu.classList.remove('show')
-            // bodyElement.classList.remove('noscroll')
+            for (let i = 0; i < sectionElement.length; i++) {
+                sectionElement[i].classList.remove('blur')
+            }
         }
     })
 
@@ -35,6 +39,9 @@
 
         mobileMenu.classList.remove('show');
         mobileMenuToggle.classList.remove('active');
+        for (let i = 0; i < sectionElement.length; i++) {
+            sectionElement[i].classList.remove('blur')
+        }
 
     })
 })();
