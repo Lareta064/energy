@@ -166,6 +166,10 @@ input {
 
 .breadcrumbs {
 	position: fixed;
+	// width: fit-content;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #fff;
 	left: 400px;
 	top: 80px;
 	right: 0;
@@ -174,6 +178,17 @@ input {
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
+
+	@media(max-width:1919px) {
+		left: 340px;
+		top: 72px;
+
+	}
+
+	@media(max-width:991px) {
+		left: 20px;
+		top: 90px;
+	}
 
 }
 
