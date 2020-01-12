@@ -4,13 +4,12 @@ header.header
     button#nav-menu-toggle.cmn-toggle-switch.cmn-toggle-switch__htx
         span toggle menu
     .header-icons
-        i.fas.fa-phone-alt(aria-hidden='true')
-        a(href="tel:+78452674604").aside-footer-phone.header-phone 8 (8452) 674 604
+        .header-phone-wrapper
+            i.fas.fa-phone-alt(aria-hidden='true')
+            a(href="tel:+78452674604").aside-footer-phone.header-phone 8 (8452) 674 604
         .header-search
             form#searchform.header-form(method='get', action='/')
                 input#s.header-form-input.search-open(type='text', value='', placeholder='Введите слово для поиска')
-                .search-close
-                    i.fa.fa-times(aria-hidden='true')
                 i.fas.fa-search(aria-hidden='true')
                 input#searchsubmit.search-submit(type='submit', value='')
         .header-social

@@ -62,7 +62,13 @@
 }
 
 .header-icons {
+    display: flex;
+    width: 100%;
     align-items: center;
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
 }
 
 .header-icons:before,
@@ -115,14 +121,7 @@
     }
 }
 
-.header-icons {
-    display: flex;
-    width: 100%;
 
-    @media (max-width: 767px) {
-        flex-wrap: wrap;
-    }
-}
 
 .header-social-item {
     padding: 6px;
@@ -136,7 +135,7 @@
 
 .fa-twitter:hover,
 .fa-vk:hover,
-.fa-facebook-f {
+.fa-facebook-f:hover {
     color: @orange;
 }
 
@@ -154,6 +153,8 @@
     width: 100%;
     background-color: white;
     margin-left: 20px;
+    -webkit-transition: ease-in .5s;
+    transition: ease-in .5s;
     @media (max-width: 991px) {
         order: 2;
         margin-left: 0;
@@ -178,14 +179,16 @@
     color: @blue;
     height: 20px;
     align-self: center;
+    padding-left: 40px;
+    background-color: white;
     @media (max-width: 767px) {
-        padding: 25px;
+        padding-left: 20px;
     }
     @media (max-width: 575px) {
         margin-left: auto;
         padding-left: 10px;
         padding-right: 15px;
-        line-height: 0;
+        line-height: 1;
     }
 }
 
@@ -195,7 +198,14 @@
         z-index: 40;
     }
 }
-
+.header-phone-wrapper {
+    display: flex;
+    white-space: nowrap;
+    padding-right: 0;
+    @media (max-width: 767px) {
+        padding-top: 25px;
+    }
+}
 .header a.header-phone {
     margin-bottom: 0;
     margin-left: 20px;
@@ -240,9 +250,15 @@
     padding-right: 50px;
     -webkit-transition: ease-in .5s;
     transition: ease-in .5s;
+    background-color: @white;
     cursor: pointer;
     @media (max-width: 991px) {
         position: absolute;
+    }
+    @media (max-width: 767px) {
+        height: 40px;
+        padding-left: 40px;
+        padding-right: 30px;
     }
     @media (max-width: 575px) {
         height: 40px;
@@ -271,7 +287,7 @@
     font-size: 20px;
     align-self: center;
     color: #000;
-    background-color: #ffffff;
+    background-color: @white;
     width: 0;
     right: 0;
     height: 25px;
@@ -279,7 +295,7 @@
     -webkit-transition: ease-in .5s;
     transition: ease-in .5s;
     @media (max-width: 991px) {
-        height: 90px;
+        height: 89px;
     }
     @media (max-width: 575px) {
         height: 30px;
@@ -288,10 +304,22 @@
 .search-open {
     width: 100%;
     @media (max-width: 991px) {
-        padding-left: 10px;
         z-index: 220;
+        height: 80px;
+    }
+    @media (max-width: 767px) {
+        margin-top: 12px;
+        height: 50px;
     }
     @media (max-width: 575px) {
         padding-left: 5px;
+        height: auto;
+        margin-left: 1px;
+        margin-top: 0;
+    }
+}
+.header-search-open {
+    @media (max-width: 767px) {
+        height: 40px;
     }
 }
