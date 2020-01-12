@@ -11,6 +11,7 @@ $(document).ready(function () {
 
     });
 
+
     //читать далее блок Партнеры
     const btnMoreInfo = document.querySelector('.more-info');
     const hideInfo = document.querySelector('.section-paragraph--hide');
@@ -33,7 +34,7 @@ $(document).ready(function () {
     for (let i = 0; i < mobCategory.length; i++) {
 
         mobCategory[i].addEventListener('click', function () {
-            console.log('555');
+
             for (let j = 0; j < mobCategoryDrop.length; j++) {
                 mobCategoryDrop[j].classList.remove('active');
             }
@@ -59,6 +60,12 @@ $(document).ready(function () {
         searchInput.classList.add('search-open');
         searchForm.classList.add('search-open');
     });
+    window.addEventListener('resize', function () {
+
+        searchInput.classList.remove('search-open');
+        searchForm.classList.remove('search-open');
+
+    })
     // let searchIcon = $('.search-icon');
     // let closeIcon = $('.search-close');
     // let input = $('.header-form-input');
