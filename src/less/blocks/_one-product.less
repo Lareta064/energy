@@ -8,7 +8,6 @@
 .one-product-desc {
     width: 50%;
     margin-left: 38px;
-    margin-right: 38px;
 }
 .one-product-table-header {
     color: #323232;
@@ -67,9 +66,9 @@
 .one-product-info-wrapper {
     width: 50%;
     margin-right: 55px;
-}
-.one-product-info-text {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .one-product-info-img {
     width: 50%;
@@ -106,6 +105,9 @@
     font-size: 37px;
     font-weight: 900;
     padding-left: 10px;
-    color: @graytext;
-    
+    color: @graytext; 
+}
+.one-product-benefits .benefits-block-item {
+    margin-bottom: 80px;
+    width: 33.3%;
 }
