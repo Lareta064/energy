@@ -1,8 +1,8 @@
 //страница Товара
-section.one-product.main-section-pt
+section.mian-section.main-section-pt#block1.fullpage
     .container
         h3.title-3 Модульные крышные котельные
-        .section-content#block1.fullpage
+        .section-content
             .one-product-slider
                 .fotorama(data-width="690" data-height="460" data-nav="thumbs" data-thumbwidth="110" data-thumbheight="110")
                     img(src='../../img/product/1.jpg')
@@ -75,7 +75,9 @@ section.one-product.main-section-pt
                             .section-description
                                 p Вес котлов
                                     span 2 тонны
-        .section-content.section-content-info#block2.fullpage
+section.mian-section#block2.fullpage
+    .container
+        .section-content.section-content-info
             .one-product-info
                 .one-product-info-wrapper
                     .one-product-info-text
@@ -93,22 +95,38 @@ section.one-product.main-section-pt
                     | Вес наполненных водой двух котлов установленных в модульной крышной котельной имеющей мощность 3,0 МВт составит порядка 11 тонн. Это будет являться большой нагрузкой на крышу отапливаемого объекта.
                 .one-product-info-link
                     #textroll Свернуть &#171;
-        section.benefits.one-product-benefits
-            .container
-                h3.title-3 Основные достоинства котельных
-                .benefits-block
-                    .benefits-block-item                
-                        .benefits-text.text-medium Полная заводская готовность (надежность всех систем котельной)
-                            .benefits-number 01
+section.mian-section
+    .container
+        .slogan-block
+            p.medium-title В индивидуальном порядке ООО «ПКФ Энергострой» осуществляет разработку и изготовление нестандартного теплотехнического и газового оборудования по заданию и чертежам заказчика.
+        .benefits.one-product-benefits
+            h3.title-3 Основные достоинства котельных
+            .benefits-block
+                .benefits-block-item                
+                    .benefits-text.text-medium Полная заводская готовность (надежность всех систем котельной)
+                        .benefits-number 01
 
-                    .benefits-block-item
-                        
-                        .benefits-text.text-medium Низкая себестоимость (сокращает капитальные затраты)
-                            .benefits-number 02
-                    .benefits-block-item                
-                        .benefits-text.text-medium Мобильность (позволяет быстро менять место эксплуатации)
-                            .benefits-number 03
+                .benefits-block-item
+                    
+                    .benefits-text.text-medium Низкая себестоимость (сокращает капитальные затраты)
+                        .benefits-number 02
+                .benefits-block-item                
+                    .benefits-text.text-medium Мобильность (позволяет быстро менять место эксплуатации)
+                        .benefits-number 03
 
-                    .benefits-block-item                
-                        .benefits-text.text-medium Низкие эксплуатационные затраты
-                            .benefits-number 04
+                .benefits-block-item                
+                    .benefits-text.text-medium Низкие эксплуатационные затраты
+                        .benefits-number 04
+            .benefits-carousel
+                .benefits-carousel-item
+                    img(src="img/home-slider/slider1.jpg", alt="slider")
+                .benefits-carousel-item
+                    img(src="img/home-slider/slider2.jpg", alt="slider")
+                .benefits-carousel-item
+                    img(src="img/home-slider/slider3.jpg", alt="slider")
+                .benefits-carousel-item
+                    img(src="img/home-slider/slider1.jpg", alt="slider")
+                .benefits-carousel-item
+                    img(src="img/home-slider/slider2.jpg", alt="slider")
+                .benefits-carousel-item
+                    img(src="img/home-slider/slider3.jpg", alt="slider")
