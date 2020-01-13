@@ -78,8 +78,10 @@
 }
 
 .products-tabs {
+    padding-bottom: 100px;
+
     .products-tabs-toggle {
-        border-bottom: 2px solid rgb(200, 200, 200);
+        border-bottom: 1px solid rgb(200, 200, 200);
 
     }
 
@@ -95,10 +97,14 @@
         padding-right: 3px;
         margin-right: 45px;
         position: relative;
-        top: 2px;
+        top: 1px;
 
         &:last-child {
             margin-right: 0;
+        }
+
+        @media(max-width:767px) {
+            margin-right: 25px;
         }
 
     }
@@ -124,13 +130,11 @@
     align-items: center;
     height: 70px;
     border-bottom: 1px solid #dadada;
-
-    font-size: 16px;
     font-weight: 300;
+    transition: .5s;
 
     @media(max-width:767px) {
-        display: block;
-        height: 140px;
+        font-size: 15px;
     }
 
     .table-cell-name {
@@ -142,9 +146,17 @@
         align-items: center;
         color: @basic;
 
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100px;
+        }
+
         @media(max-width:767px) {
-            width: 100%;
-            height: 50%;
+            padding-left: 12px;
+            width: 40%;
+
         }
 
     }
@@ -158,9 +170,21 @@
         align-items: center;
         color: @basic;
 
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }
+
+        @media(max-width:1199px) {
+            padding-left: 12px;
+            width: 50%;
+        }
+
         @media(max-width:767px) {
-            width: 100%;
-            height: 50%;
+
+            width: 60%;
         }
     }
 
@@ -174,6 +198,11 @@
         align-items: center;
         padding-left: 0;
         justify-content: center;
+
+        @media(max-width:1199px) {
+            padding-left: 12px;
+            width: 17%;
+        }
 
         @media(max-width:767px) {
             display: none;
@@ -206,6 +235,16 @@
     .table-cell-more {
         font-size: 18px;
     }
+}
+
+.products-table-row:hover {
+
+    background-color: rgba(239, 127, 26, 0.08);
+}
+
+.products-table-header.products-table-row:hover {
+    background-color: #efefef;
+
 }
 
 .products-table-row:hover .table-arrow:after {
