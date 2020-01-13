@@ -1,0 +1,86 @@
+.slogan-block {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 10px 25px 4px rgba(33, 33, 33, 0.05);
+
+    .medium-title {
+        padding: 30px 45px;
+        border-right: 2px solid @blue;
+        border-left: 2px solid @blue;
+
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        width: 16%;
+        height: 2px;
+        background-color: @blue;
+    }
+
+    &:before {
+        top: 25px;
+        left: 15px;
+    }
+
+    &:after {
+        bottom: 25px;
+        right: 15px;
+    }
+
+}
+
+@media(max-width:1919px) {
+    .slogan-block .medium-title {
+        font-size: 18px;
+        padding: 25px 30px;
+    }
+}
+
+@media(max-width:757px) {
+    .slogan-block {
+
+        &:before,
+        &:after {
+            width: 30%;
+        }
+
+        .medium-title {
+            position: relative;
+            padding: 25px 20px;
+            font-size: 16px;
+            border: 0px;
+        }
+
+        .medium-title:before,
+        .medium-title:after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 50%;
+            background-color: @blue;
+        }
+
+        .medium-title:after {
+            bottom: 0;
+            right: 0px;
+        }
+
+        .medium-title:before {
+            top: 0;
+            left: 0px;
+        }
+    }
+}
+
+@media(max-width:575px) {
+
+    .slogan-block .medium-title:before,
+    .slogan-block .medium-title:after {
+
+        height: 35%;
+
+    }
+}
