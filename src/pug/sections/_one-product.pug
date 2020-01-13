@@ -1,0 +1,54 @@
+//страница Товара
+section.one-product.main-section-pt
+    .container
+        h3.title-3 Модульные крышные котельные
+        .section-content#block1.fullpage
+            .one-product-slider
+                .fotorama(data-width="800" data-height="600")
+                    img(src='../../img/product/1.jpg')
+                    img(src='../../img/product/2.jpg')
+                    img(src='../../img/product/3.jpg')
+                    img(src='../../img/product/4.jpg')
+                    img(src='../../img/product/5.jpg')
+            .one-product-desc
+                #tabs
+                    .tab-container
+                        .tab-wrapper
+                            input#tab1(type='radio', name='tab', checked='')
+                            label.tab-label(for='tab1', nth='1')
+                                span Характеристики
+                            #tab-content1.tab-item
+                                .tab-content
+                                    tr
+                                        th.tab-content-name Наименование
+                                        th.tab-content-desc Характеристика
+                                    tr
+                                        td.tab-content-name Регулируемая среда
+                                        td.tab-content-desc Природный газ по ГОСТ 5542-87
+                                    tr
+                                        td.tab-content-name Регулятор давления газа
+                                        td.tab-content-desc РДГ-80Н
+                                    tr
+                                        td.tab-content-name Максимальное входное давление, МПа
+                                        td.tab-content-desc 1,2
+                                    tr
+                                        td.tab-content-name Диапазон настройки выходного давления, кПа
+                                        td.tab-content-desc 1 — 60
+                                    tr
+                                        td.tab-content-name Пропускная способность, м³ /ч, при входном давлении, Мпа:
+                                        td.tab-content-desc РДГ-80Н (В)
+                                    tr
+                                        td.tab-content-name Средний срок службы, лет
+                                        td.tab-content-desc 15
+                                    tr
+                                        td.tab-content-name Назначенный срок службы, лет
+                                        td.tab-content-desc 40
+                                    tr
+                                        td.tab-content-name Масса, кг
+                                        td.tab-content-desc 520
+                            input#tab2(type='radio', name='tab')
+                            label.tab-label(for='tab2', nth='2')
+                                span Описание
+                            #tab-content2.tab-item
+                                | It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                    

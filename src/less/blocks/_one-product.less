@@ -1,0 +1,89 @@
+#tabs {
+    width: 100%;
+}
+
+.tab-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: sans-serif;
+    position: relative;
+    &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        background-color: @gray;
+        top: 35px;
+        left: 15px;
+    }
+}
+
+.tab-wrapper .tab-item,
+.tab-wrapper input {
+    display: none;
+}
+
+.tab-wrapper .tab-item {
+    background-color: #fff;
+    max-width: 100%;
+    padding: 20px;
+    order: 1;
+}
+
+.tab-wrapper label {
+    height: 35px;
+    line-height: 35px;
+    min-width: 50px;
+    padding: 0px 20px;
+    float: left;
+    color: @gray;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-wrapper input:checked+label {
+    background-color: #fff;
+    color: @blueText;
+    font-weight: 600;
+    
+}
+.tab-wrapper input:checked+label span {
+    position: relative;
+    &:before {
+        content: '';
+        height: 2px;
+        position: absolute;
+        background-color: #008dd2;
+        top: 24px;
+        left: -6px;
+        right: -6px;
+    }
+}
+
+.tab-wrapper input:checked+label+.tab-item {
+    display: block;
+}
+
+.tab-wrapper .tab-content tr {
+    text-align: left;
+}
+.tab-wrapper tr td {
+    padding-top: 18px;
+}
+.tab-wrapper th .tab-content-desc {
+    padding-left: 20px;
+}
+.tab-wrapper tr .tab-content-desc {
+    white-space: nowrap;
+    padding-left: 20px;
+}
