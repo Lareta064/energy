@@ -193,6 +193,10 @@ input {
 		top: 90px;
 	}
 
+	@media(max-width:767px) {
+		display: none;
+	}
+
 }
 
 .breadcrumbs-item {
@@ -201,10 +205,6 @@ input {
 	position: relative;
 	padding-right: 16px;
 	color: @basic;
-
-	@media(max-width:767px) {
-		display: none;
-	}
 
 	&:last-child {
 		cursor: default;
