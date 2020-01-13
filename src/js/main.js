@@ -11,7 +11,6 @@ $(document).ready(function () {
 
     });
 
-
     //читать далее блок Партнеры
     const btnMoreInfo = document.querySelector('.more-info');
     const hideInfo = document.querySelector('.section-paragraph--hide');
@@ -87,6 +86,5 @@ $(document).ready(function () {
         tabsTableContent.classList.remove('active');
 
     });
-
 
 })
