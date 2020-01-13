@@ -1,0 +1,14 @@
+extends ../layouts/layout-about.pug
+
+block content
+	.wrapper
+		include ../sections/_breadcrumbs.pug
+		include ../sections/_page-navigation.pug
+		include ../sections/_aside.pug
+		include ../sections/_header.pug
+		include ../sections/_about.pug
+		include ../sections/_footer.pug
+
+
+block variables
+	-var title = "О компании";
