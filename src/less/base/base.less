@@ -15,9 +15,11 @@ body {
 	color: @basic;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
-	line-height: 1.4;
+	position: relative;
+}
 
-
+.noscroll {
+	overflow: hidden;
 }
 
 a,
@@ -52,7 +54,7 @@ input {
 	outline: none;
 }
 
-.title-3 {
+.title-3 h3 {
 	font-size: 30px;
 	font-weight: 700;
 	color: @blueText;
@@ -77,9 +79,10 @@ input {
 	font-weight: 300;
 }
 
-.section-paragraph {
+.section-paragraph p {
 	line-height: 1.5;
 	padding-bottom: 24px;
+	font-weight: 300;
 }
 
 
@@ -99,7 +102,7 @@ input {
 	z-index: 50;
 	display: block;
 
-	@media(max-width:1559px) {
+	@media(max-width:1919px) {
 		display: none;
 	}
 }
@@ -163,11 +166,11 @@ input {
 
 .aside.show {
 	transform: translateX(0);
+	padding-bottom: 20px;
 }
 
 .breadcrumbs {
-	position: fixed;
-	// width: fit-content;
+	position: absolute;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	background-color: #fff;
@@ -179,9 +182,11 @@ input {
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
+	transition: .5s;
 
 	@media(max-width:1919px) {
 		top: 72px;
+		position: fixed;
 	}
 
 	@media(max-width:1365px) {
@@ -199,6 +204,10 @@ input {
 		display: none;
 	}
 
+}
+
+.breadcrumbs.hide {
+	opacity: 0;
 }
 
 .breadcrumbs-item {

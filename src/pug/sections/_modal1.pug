@@ -1,0 +1,34 @@
+
+.modal-call
+    .title-3
+        h3 Заказать звонок       
+    
+    form(action="").contacts-form        
+        .form-content
+            button.close-modal.close-modal1
+                span Закрыть
+                i.fas.fa-times
+            .form-col
+                .form-row
+                    input.form-row__input(type="text" name="name" )
+                    span.form-row__fake-placeholder Ваше имя
+                    
+                .form-row
+                    input.form-row__input(type="text" name="phone")
+                    span.form-row__fake-placeholder Телефон
+                    
+            .form-col
+                .form-row
+                    input.form-row__input(type="text" name="time")
+                    span.form-row__fake-placeholder Удобное время звонка
+                    
+                .form-textarea
+                    textarea.form-row__input.form-row__input--textarea(name="message", rows="8" placeholder="Какие услуги или оборудование Вас интересует")
+                    //- span.form-row__fake-placeholder Сообщение
+            
+
+        
+        .form-col.form-button
+            p *заполняя данную форму, Вы соглашаетесь на обработку персональных данных , в соответствии с #[a(href="#") Политикой конфеденциальности]                   
+            
+            input.page-button(type="submit" name="form-button" value="Отправить")
