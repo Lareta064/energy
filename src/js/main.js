@@ -48,6 +48,7 @@ $(document).ready(function () {
     let searchHeader = document.querySelector('.header-search');
     let searchInput = document.querySelector('.header-form-input');
     searchForm.addEventListener('click', function (e) {
+        e.preventDefault();
         $target = $(e.target);
         if (searchInput.classList.contains('search-open') && searchInput.value == '' && !$target.hasClass('header-form-input')) {
             searchInput.classList.remove('search-open');
@@ -62,29 +63,51 @@ $(document).ready(function () {
 
         }
     });
+    // const bodyElement = document.querySelector('body')
+    // const callBtn = document.querySelector('.aside-footer-callback')
+    // const priceBtn = document.querySelector('.aside-footer-price')
+    // const callModal = document.querySelector('.modal-call')
+    // const closeModal = document.querySelector('.close-modal')
 
-    console.log('555');
-    //-tabs Products
-    const tabsToggleTable = document.querySelector('#tabOne');
-    const tabsToggleDescrip = document.querySelector('#tabTwo');
-    const tabsTableContent = document.querySelector('#tabOneContent');
-    const tabsDescripContent = document.querySelector('#tabTwoContent');
+    // callBtn.addEventListener('click', function () {
 
-    tabsToggleTable.addEventListener('click', function () {
-        console.log('456');
-        this.classList.add('active');
-        tabsToggleDescrip.classList.remove('active');
-        tabsTableContent.classList.add('active');
-        tabsDescripContent.classList.remove('active');
+    //     callModal.classList.add('show')
+    //     bodyElement.classList.add('noscroll')
+    // })
 
-    });
-    tabsToggleDescrip.addEventListener('click', function () {
-        console.log('789');
-        this.classList.add('active');
-        tabsToggleTable.classList.remove('active');
-        tabsDescripContent.classList.add('active');
-        tabsTableContent.classList.remove('active');
+    // closeModal.addEventListener('click', function () {
+    //     callModal.classList.remove('show')
+    //     bodyElement.classList.remove('noscroll')
+    // })
+    // closeModal.addEventListener('click', function () {
+    //     callModal.classList.remove('show')
+    //     bodyElement.classList.remove('noscroll')
+    // })
 
-    });
+    // //-tabs Products
+    // const tabsToggleTable = document.querySelector('#tabOne');
+    // const tabsToggleDescrip = document.querySelector('#tabTwo');
+    // const tabsTableContent = document.querySelector('#tabOneContent');
+    // const tabsDescripContent = document.querySelector('#tabTwoContent');
+
+    // tabsToggleTable.addEventListener('click', function () {
+    //     console.log('456');
+    //     this.classList.add('active');
+    //     tabsToggleDescrip.classList.remove('active');
+    //     tabsTableContent.classList.add('active');
+    //     tabsDescripContent.classList.remove('active');
+
+    // });
+    // tabsToggleDescrip.addEventListener('click', function () {
+    //     console.log('789');
+    //     this.classList.add('active');
+    //     tabsToggleTable.classList.remove('active');
+    //     tabsDescripContent.classList.add('active');
+    //     tabsTableContent.classList.remove('active');
+
+    // });
+
+
+
 
 })
