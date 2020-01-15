@@ -48,25 +48,32 @@ $(document).ready(function () {
     let searchForm = document.getElementById('searchform');
     let searchHeader = document.querySelector('.header-search');
     let searchInput = document.querySelector('.header-form-input');
+    let breadcrumbsBlock = document.querySelector('.breadcrumbs');
     searchForm.addEventListener('click', function (e) {
-        e.preventDefault()
+        e.preventDefault();
         $target = $(e.target);
         if (searchInput.classList.contains('search-open') && searchInput.value == '' && !$target.hasClass('header-form-input')) {
             searchInput.classList.remove('search-open');
             searchForm.classList.remove('search-open');
             searchHeader.classList.remove('header-search-open');
+            if (window.innerWidth > 991) {
+                breadcrumbsBlock.classList.remove('hide');
+            }
 
         } else if (searchInput.classList.contains('search-open') && searchInput.value != '') {
             searchForm.submit();
-
-
+            if (window.innerWidth > 991) {
+                breadcrumbsBlock.classList.remove('hide');
+            }
         } else {
             searchInput.classList.add('search-open');
             searchForm.classList.add('search-open');
             searchHeader.classList.add('header-search-open');
-
-
+            if (window.innerWidth > 991) {
+                breadcrumbsBlock.classList.add('hide');
+            }
 
         }
     });
+
 })
